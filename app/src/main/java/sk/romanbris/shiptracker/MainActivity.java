@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -24,9 +25,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng ship = new LatLng(48.615152, 18.305411);
+        googleMap.addMarker(new MarkerOptions().position(ship)
+                .title("Ship")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.boat)));
+
+        LatLng phone = new LatLng(48.615347, 18.306976);
+        googleMap.addMarker(new MarkerOptions().position(phone)
+                .title("Phone")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.phone)));
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ship, 15));
     }
 }
