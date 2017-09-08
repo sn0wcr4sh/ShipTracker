@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ShipTracker</string>
     <string name="google_maps_key">AIzaSyDn5MJho23WzE695iHdCUKdEtp9cGulK1Y</string>
+    <string name="wifi_state">Wi-fi state:</string>
+    <string name="wifi_on">On</string>
+    <string name="wifi_off">Off</string>
+    <string name="connect_to_ship">Connect to ship</string>
 </resources>
