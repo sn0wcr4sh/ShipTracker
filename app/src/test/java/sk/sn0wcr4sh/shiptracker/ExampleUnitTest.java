@@ -1,4 +1,4 @@
-package sk.romanbris.shiptracker;
+package sk.sn0wcr4sh.shiptracker;
 
 import org.junit.Test;
 

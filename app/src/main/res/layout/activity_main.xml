@@ -4,33 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sk.romanbris.shiptracker.MainActivity"
+    tools:context="sk.sn0wcr4sh.shiptracker.MainActivity"
     android:padding="16dp">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:columnCount="2">
         <TextView
+            android:layout_column="0"
+            android:layout_row="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            style="@style/TextViewLabel"
             android:text="@string/wifi_state"/>
         <TextView
+            android:layout_column="1"
+            android:layout_row="0"
             android:id="@+id/tvWifiState"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextViewValue"
             android:text="@string/wifi_on"/>
-    </LinearLayout>
+
+        <TextView
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewLabel"
+            android:text="@string/ship_address"/>
+        <TextView
+            android:id="@+id/tvShipAddress"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextViewValue"
+            android:text="@string/unread"/>
+
+    </GridLayout>
 
     <Button
         android:id="@+id/btConnect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/connect_to_ship"
-        android:onClick="startConnecting"/>
+        android:text="@string/connect"
+        android:onClick="startDiscovery"/>
+
+
 
 
     <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
@@ -42,3 +67,4 @@
               <!--tools:context="com.example.mapwithmarker.MapsMarkerActivity" />-->
 
 </RelativeLayout>
+

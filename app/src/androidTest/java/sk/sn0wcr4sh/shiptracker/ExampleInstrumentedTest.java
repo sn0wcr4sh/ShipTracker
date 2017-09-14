@@ -1,4 +1,4 @@
-package sk.romanbris.shiptracker;
+package sk.sn0wcr4sh.shiptracker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="sk.romanbris.shiptracker"
+<manifest package="sk.sn0wcr4sh.shiptracker"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission
@@ -30,7 +30,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="sk.sn0wcr4sh.shiptracker.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
