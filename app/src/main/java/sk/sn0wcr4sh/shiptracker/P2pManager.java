@@ -21,7 +21,7 @@ import java.util.Map;
 class P2pManager {
 
     interface Listener {
-        void onConnected(WifiP2pInfo info);
+        void onGotP2pInfo(WifiP2pInfo info);
     }
 
     private final String TAG = "ShipTracker";
@@ -74,7 +74,7 @@ class P2pManager {
                 public void onConnectionInfoAvailable(WifiP2pInfo info) {
                     Log.d(TAG, "Connection info ready");
                     Log.d(TAG, "Owner address: " + info.groupOwnerAddress.getHostAddress());
-                    mListener.onConnected(info);
+                    mListener.onGotP2pInfo(info);
                 }
             });
         }

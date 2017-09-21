@@ -8,4 +8,6 @@
     <string name="ship_address">Ship address:</string>
     <string name="unread">-</string>
     <string name="connect">Connect</string>
+    <string name="connection">Connection:</string>
+    <string name="read_data">Read data:</string>
 </resources>
